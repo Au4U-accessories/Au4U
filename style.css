@@ -18,25 +18,21 @@ body {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 16px;
-
 }
-.dm{
-text-align: center;
-text-shadow: #013f05;
-text-decoration: dashed;
-color: #ff0000;
-font-size: 3em;
+.dm {
+  text-align: center;
+  text-shadow: #013f05;
+  text-decoration: dashed;
+  color: #ff0000;
+  font-size: 3em;
 }
-
-.items{
+.items {
   font-size: smaller;
   margin-left: 10px;
   color: rgb(73, 71, 71);
 }
 
-
 /* ----------  Header  ---------- */
-
 header {
   background: #013233;
   box-shadow: 0 2px 10px rgba(0,0,0,0.05);
@@ -44,16 +40,17 @@ header {
   top: 0;
   left: 0;
   width: 100%;
-  height: 20%;
+  height: 110px; /* ارتفاع النافبار */
   z-index: 999;
+  padding-bottom: 0; /* أتأكد إنه مفيش بادينج */
 }
 
 /* --- top bar --- */
 .top-bar {
   display: grid;
-  grid-template-columns: 1fr auto 1fr;    /* left  middle  right  */
+  grid-template-columns: 1fr auto 1fr; /* left middle right */
   align-items: center;
-  padding: 18px 0;
+  padding: 12px 0; /* قللت البادينج */
 }
 
 /* social (left) */
@@ -62,8 +59,8 @@ header {
   gap: 12px;
 }
 .social-icons img {
-  width: 45px;
-  height: 45px;
+  width: 35px; /* صغرنا الايقونات */
+  height: 35px;
   transition: transform .3s ease;
 }
 .social-icons a:hover img {
@@ -75,79 +72,49 @@ header {
   background: linear-gradient(to right, #6f4e37, #c7a477);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  font-size: 40px;
-  font-weight: bold;
+  font-size: 24px; /* صغرنا الخط */
+  font-weight: 600;
   text-align: center;
   justify-self: center;
-  font-size: 28px;
   letter-spacing: 2px;
-  font-weight: 600;
 }
-.follow{
+.follow {
   color: #d4d4d4;
   margin-top: 7px;
 }
+
 /* utilities (right) */
 .utility {
   justify-self: end;
   display: flex;
   align-items: center;
   gap: 18px;
-
 }
-
-
-
 .search-input {
   padding: 7px 12px;
   border: 1px solid #ccc;
   border-radius: 20px;
   font-size: 14px;
   outline: none;
-  min-width: 140px;
+  min-width: 120px; /* صغرنا المدخل */
 }
-
 .search-input:focus {
   border-color: #6f4e37;
-}
-
-
-/* cart */
-.cart-icon {
-  position: relative;
-  display: inline-block;
-}
-.cart-icon img {
-  width: 31px;
-  height: 31px;
-}
-.cart-count {
-  position: absolute;
-  top: -6px;
-  right: -8px;
-  background: #6f4e37;
-  color: #fff;
-  font-size: 11px;
-  font-weight: 600;
-  padding: 1px 5px;
-  border-radius: 50%;
 }
 
 /* --- nav bar --- */
 .nav-row::before {
   content: "";
   display: block;
-  width: 1200px; /* short line */
+  width: 900px; /* صغرنا الخط */
   height: 2px;
   background-color: #f5bd2f;
-  margin: 0 auto 10px auto; /* center it */
-  margin-bottom: 0px;
+  margin: 0 auto 5px auto; /* center it and أقلل المسافة */
 }
 .nav-links {
   display: flex;
   justify-content: center;
-  gap: 40px;
-
+  gap: 30px; /* قللنا المسافة بين الروابط */
   list-style: none;
   flex-wrap: wrap;
 }
@@ -156,15 +123,11 @@ header {
   color: #d4d4d4;
   font-weight: 500;
   transition: color .2s ease;
+  font-size: 16px; /* صغرنا الخط */
 }
 .nav-links a:hover {
   color: #6f4e37;
 }
-
-
-
-
-
 
 /* Dropdown container */
 .nav-links li.dropdown {
@@ -217,7 +180,6 @@ header {
   cursor: pointer;
 }
 
-
 /* ----------  Hero  ---------- */
 .hero {
   height: 40vh;
@@ -227,10 +189,12 @@ header {
   justify-content: center;
   text-align: center;
   color: #fff;
+  margin-top: 0;    /* تأكد إنه مفيش margin */
+  padding-top: 20px; /* لو حابب تضيف شوية padding داخلي */
 }
 .hero-content h2 {
-  font-size: 42px;
-  margin-bottom: 24px;
+  font-size: 36px; /* صغرنا الخط */
+  margin-bottom: 20px;
   font-weight: 500;
 }
 .btn {
@@ -243,10 +207,10 @@ header {
   font-weight: 600;
   transition: background .3s ease;
 }
-.btn:hover { background: #013f05; }
-
-
-.more-btn{ 
+.btn:hover {
+  background: #013f05;
+}
+.more-btn {
   display: inline-block;
   padding: 12px 28px;
   border-radius: 24px;
@@ -255,76 +219,64 @@ header {
   text-decoration: none;
   font-weight: 600;
   transition: background .3s ease;
-  margin-left: 580px;
-  margin-bottom: 20px;
+  margin: 0 auto 20px auto;  /* خلي المارجن تلقائي عشان يتوسط */
+  display: block; /* لازم نخليها بلوك عشان margin auto يشتغل */
+  text-align: center; /* كمان للتأكيد */
+  max-width: 200px; /* لو تحب تحدد عرض */
 }
 
+
 /* ----------  Collections  ---------- */
-/* Global container */
-/* Container for layout */
 .container {
   width: 90%;
   margin: 0 auto;
 }
-
-/* Section title style */
 .section-title {
-  font-size: 32px;
-  margin-bottom: 30px;
+  font-size: 28px;
+  margin-bottom: 25px;
   color: #000000;
   text-align: left;
 }
-
-/* Grid layout */
 .collection-grid {
   display: flex;
   flex-wrap: wrap;
-  gap: 40px;
+  gap: 30px;
   justify-content: center;
   margin-bottom: 50px;
 }
-
-/* Each item box */
 .collection-item {
-  width: 350px;
+  width: 100%;
+  max-width: 320px;
   text-align: center;
-  height: auto; /* Ensure it's not cutting off content */
+  height: auto;
 }
-
-/* Image style */
 .collection-item img {
   width: 100%;
-  height: 300px ;
+  height: 280px;
   border-radius: 10px;
   margin-bottom: 10px;
 }
-
 .image-slider {
   position: relative;
   width: 100%;
-  height: 300px; /* Make sure this height matches image height */
+  height: 280px;
   overflow: hidden;
 }
-
-
 .image-slider .slide {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  object-fit: contain; /* <<< changed this line */
+  object-fit: contain;
   border-radius: 10px;
   opacity: 0;
   transition: opacity 0.5s ease;
-  background-color: white; /* optional: in case your images have transparent areas */
+  background-color: white;
 }
-
-
 .image-slider .slide.active {
   opacity: 1;
 }
-
 .image-slider .prev,
 .image-slider .next {
   position: absolute;
@@ -339,23 +291,18 @@ header {
   font-size: 18px;
   border-radius: 50%;
 }
-
-.image-slider .prev { left: 10px; }
-.image-slider .next { right: 10px; }
-
-
-
-
-
-/* Product name under image */
+.image-slider .prev {
+  left: 10px;
+}
+.image-slider .next {
+  right: 10px;
+}
 .item-name {
   font-size: 18px;
   font-weight: 600;
   margin: 6px 0;
   color: #333;
 }
-
-/* Price and quantity */
 .price,
 .pieces {
   font-size: 15px;
@@ -363,9 +310,6 @@ header {
   margin: 2px 0;
   font-weight: 500;
 }
-
-
-
 
 /* ----------  About  ---------- */
 .about {
@@ -395,11 +339,33 @@ footer {
 
 /* ----------  Responsive  ---------- */
 @media (max-width: 768px) {
-  .top-bar { grid-template-columns: auto auto auto; }
-  .social-icons { justify-self: start; }
-  .utility { gap: 12px; }
-  .brand { font-size: 24px; }
-  .hero-content h2 { font-size: 30px; }
+  .top-bar {
+    grid-template-columns: auto auto auto;
+  }
+  .social-icons {
+    justify-self: start;
+  }
+  .utility {
+    gap: 12px;
+  }
+  .brand {
+    font-size: 20px;
+  }
+  .hero-content h2 {
+    font-size: 24px;
+  }
+  .nav-links {
+    gap: 20px;
+  }
+  .nav-links a {
+    font-size: 14px;
+  }
+  .collection-item {
+    max-width: 90%;
+  }
 }
 
-
+/* ------------- Fix anchor scroll for fixed navbar ------------- */
+[id] {
+  scroll-margin-top: 110px; /* نفس ارتفاع الـ navbar */
+}
