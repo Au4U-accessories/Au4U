@@ -6,13 +6,15 @@
   padding: 0;
   box-sizing: border-box;
 }
+
 body {
   font-family: 'Segoe UI', sans-serif;
   background: #faf9f6;
   color: #080808;
   line-height: 1.6;
-  padding-top: 110px; /* يتماشى مع ارتفاع الهيدر */
+  padding-top: 110px; /* Offset for fixed header */
 }
+
 .container {
   width: 100%;
   max-width: 1200px;
@@ -30,7 +32,6 @@ header {
   width: 100%;
   height: 110px;
   z-index: 999;
-  padding-bottom: 0;
 }
 
 .top-bar {
@@ -40,19 +41,27 @@ header {
   padding: 12px 0;
 }
 
+.dm {
+  color: red;
+  font-size: 32px;
+  text-align: center;
+}
 
 .social-icons {
   display: flex;
   gap: 12px;
 }
+
 .social-icons img {
   width: 35px;
   height: 35px;
-  transition: transform .3s ease;
+  transition: transform 0.3s ease;
 }
+
 .social-icons a:hover img {
   transform: scale(1.2);
 }
+
 .follow {
   color: #d4d4d4;
   margin-top: 7px;
@@ -75,6 +84,7 @@ header {
   align-items: center;
   gap: 18px;
 }
+
 .search-input {
   padding: 7px 12px;
   border: 1px solid #ccc;
@@ -83,6 +93,7 @@ header {
   outline: none;
   min-width: 120px;
 }
+
 .search-input:focus {
   border-color: #6f4e37;
 }
@@ -96,6 +107,7 @@ header {
   background-color: #f5bd2f;
   margin: 0 auto 5px auto;
 }
+
 .nav-links {
   display: flex;
   justify-content: center;
@@ -103,19 +115,23 @@ header {
   list-style: none;
   flex-wrap: wrap;
 }
+
 .nav-links a {
   text-decoration: none;
   color: #d4d4d4;
   font-weight: 500;
-  transition: color .2s ease;
+  transition: color 0.2s ease;
   font-size: 16px;
 }
+
 .nav-links a:hover {
   color: #6f4e37;
 }
+
 .nav-links li.dropdown {
   position: relative;
 }
+
 .dropdown-menu {
   display: none;
   position: absolute;
@@ -129,9 +145,11 @@ header {
   border-radius: 6px;
   z-index: 1000;
 }
+
 .dropdown-menu li {
   padding: 8px 20px;
 }
+
 .dropdown-menu li a {
   color: #d4d4d4;
   text-decoration: none;
@@ -139,13 +157,16 @@ header {
   font-weight: 500;
   transition: background-color 0.2s ease;
 }
+
 .dropdown-menu li a:hover {
   background-color: #6f4e37;
   color: white;
 }
+
 .nav-links li.dropdown:hover .dropdown-menu {
   display: block;
 }
+
 .nav-links li.dropdown > a:hover {
   color: #6f4e37;
   cursor: pointer;
@@ -154,21 +175,23 @@ header {
 /* ----------  Hero Section  ---------- */
 .hero {
   height: 40vh;
-  background: linear-gradient(to right, #6f4e37, #c7a477);              
+  background: linear-gradient(to right, #6f4e37, #c7a477);
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
   color: #fff;
-  margin: 0;
-  padding: 0;
+  padding: 0 20px;
 }
+
 .hero-content h2 {
   font-size: 36px;
   margin-bottom: 20px;
   font-weight: 500;
 }
-.btn {
+
+.btn,
+.more-btn {
   display: inline-block;
   padding: 12px 28px;
   border-radius: 24px;
@@ -176,20 +199,16 @@ header {
   color: #fff;
   text-decoration: none;
   font-weight: 600;
-  transition: background .3s ease;
+  transition: background 0.3s ease;
 }
-.btn:hover {
+
+.btn:hover,
+.more-btn:hover {
   background: #013f05;
 }
+
 .more-btn {
   display: block;
-  padding: 12px 28px;
-  border-radius: 24px;
-  background: #6f4e37;
-  color: #fff;
-  text-decoration: none;
-  font-weight: 600;
-  transition: background .3s ease;
   margin: 0 auto 20px auto;
   text-align: center;
   max-width: 200px;
@@ -202,6 +221,7 @@ header {
   color: #000000;
   text-align: left;
 }
+
 .collection-grid {
   display: flex;
   flex-wrap: wrap;
@@ -209,23 +229,27 @@ header {
   justify-content: center;
   margin-bottom: 50px;
 }
+
 .collection-item {
   width: 100%;
   max-width: 320px;
   text-align: center;
 }
+
 .collection-item img {
   width: 100%;
   height: 280px;
   border-radius: 10px;
   margin-bottom: 10px;
 }
+
 .image-slider {
   position: relative;
   width: 100%;
   height: 280px;
   overflow: hidden;
 }
+
 .image-slider .slide {
   position: absolute;
   top: 0;
@@ -238,15 +262,17 @@ header {
   transition: opacity 0.5s ease;
   background-color: white;
 }
+
 .image-slider .slide.active {
   opacity: 1;
 }
+
 .image-slider .prev,
 .image-slider .next {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  background-color: rgba(0,0,0,0.5);
+  background-color: rgba(0, 0, 0, 0.5);
   color: white;
   border: none;
   padding: 8px;
@@ -255,18 +281,22 @@ header {
   font-size: 18px;
   border-radius: 50%;
 }
+
 .image-slider .prev {
   left: 10px;
 }
+
 .image-slider .next {
   right: 10px;
 }
+
 .item-name {
   font-size: 18px;
   font-weight: 600;
   margin: 6px 0;
   color: #333;
 }
+
 .price,
 .pieces {
   font-size: 15px;
@@ -281,11 +311,13 @@ header {
   padding: 70px 20px;
   text-align: center;
 }
+
 .about h2 {
   font-size: 28px;
   color: #6f4e37;
   margin-bottom: 18px;
 }
+
 .about p {
   max-width: 800px;
   margin: 0 auto;
@@ -304,10 +336,7 @@ footer {
 /* ----------  Responsive  ---------- */
 @media (max-width: 768px) {
   .top-bar {
-    display: flex;
     flex-direction: column;
-    align-items: center;
-    padding: 10px;
     gap: 10px;
   }
 
@@ -318,7 +347,6 @@ footer {
   }
 
   .social-icons {
-    flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
     gap: 6px;
@@ -357,6 +385,19 @@ footer {
     font-size: 15px;
   }
 
+  .nav-links li.dropdown:hover .dropdown-menu {
+    display: none;
+  }
+
+  .nav-links li.dropdown:focus-within .dropdown-menu {
+    display: block;
+  }
+
+  .hero {
+    height: auto;
+    padding: 40px 10px;
+  }
+
   .hero-content h2 {
     font-size: 22px;
     padding: 0 10px;
@@ -366,7 +407,8 @@ footer {
     font-size: 14px;
   }
 
-  .btn, .more-btn {
+  .btn,
+  .more-btn {
     font-size: 14px;
     width: 80%;
     margin: 12px auto;
@@ -407,13 +449,14 @@ footer {
     height: 180px;
   }
 
-  .btn, .more-btn {
+  .btn,
+  .more-btn {
     font-size: 13px;
     padding: 8px 16px;
   }
 }
 
-/* Anchor scroll fix */
+/* ---------- Anchor scroll fix ---------- */
 [id] {
   scroll-margin-top: 110px;
 }
