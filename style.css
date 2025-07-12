@@ -39,11 +39,7 @@ header {
   align-items: center;
   padding: 12px 0;
 }
-.dm{
-  color: red;
-  font-size: 32px;
-  text-align: center;
-}
+
 
 .social-icons {
   display: flex;
