@@ -3,209 +3,45 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Au4U Home</title>
+  <title>Au4U - Home</title>
   <link rel="stylesheet" href="style.css" />
-  <link rel="icon" href="Logo-removebg-preview.png" type="image/png" />
-  <script src="script.js" defer></script>
+  <script src="script.js"></script>
+  <script src="https://kit.fontawesome.com/your_kit_id.js" crossorigin="anonymous"></script>
 </head>
 <body>
-
-  <!-- ====== Header ====== -->
   <header>
-    <div class="top-bar container">
-      <div class="social-icons">
-        <p class="follow">Follow us</p>
-        <a href="https://www.instagram.com/au4u.accessories/" target="_blank">
-          <img src="https://img.icons8.com/3d-fluency/94/instagram-new.png" alt="Instagram">
-        </a>
-        <a href="https://www.facebook.com/profile.php?id=61578102353925" target="_blank">
-          <img src="https://img.icons8.com/color/48/facebook-new.png" alt="Facebook">
-        </a>
-        <a href="https://www.tiktok.com/@au4u.accessories" target="_blank">
-          <img src="https://img.icons8.com/plasticine/100/tiktok.png" alt="TikTok">
-        </a>
-        <a href="https://api.whatsapp.com/send/?phone=%2B201507135202&text&type=phone_number&app_absent=0" target="_blank">
-          <img src="https://img.icons8.com/color/48/whatsapp--v1.png" alt="WhatsApp">
-        </a>
+    <nav class="navbar fixed-nav">
+      <div class="logo-social">
+        <span class="logo">Au4U</span>
+        <a href="shop.html" class="nav-link">Shop</a>
+        <span class="social-icons">
+          <a href="https://api.whatsapp.com/send/?phone=%2B201507135202&text&type=phone_number&app_absent=0" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp" class="icon-img" /></a>
+          <a href="https://www.instagram.com/au4u.accessories/" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram" class="icon-img" /></a>
+          <a href="https://www.tiktok.com/@au4u.accessories" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/3046/3046121.png" alt="TikTok" class="icon-img" /></a>
+          <a href="https://www.facebook.com/profile.php?id=61578102353925" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" alt="Facebook" class="icon-img" /></a>
+        </span>
       </div>
-      <h1 class="brand">Au4U</h1>
-      <div class="utility">
-        <input type="search" class="search-input" placeholder="Search…" />
-      </div>
-    </div>
-
-    <nav class="nav-row">
-      <ul class="nav-links container">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="shop.html">Shop</a></li>
-      </ul>
     </nav>
   </header>
 
-  <!-- ====== Hero ====== -->
-  <section class="hero">
-    <div class="hero-content">
-      <h2>Elegance Accessories That Shine With You.</h2>
-      <p><strong>Stainless Accessories</strong></p>
-      <p><strong>For orders DM instagram or whatsapp</strong></p>
-      <p><strong>For more collections</strong></p>
+  <main class="content">
+    <section class="hero">
+      <h1>Elegance Accessories That Glows With You</h1>
+      <h2>Stainless Steel Accessories</h2>
+      <h4>For Orders DM WhatsApp or Instagram</h4>
+      <h4>For Collections</h4>
       <a href="shop.html" class="btn">Shop Now</a>
-    </div>
-  </section>
+    </section>
 
-  <!-- ====== Collections ====== -->
-  <section class="collections">
-    <div class="container">
-      <h2 class="section-title">Last Collection</h2>
-      <div class="collection-grid">
 
-        <!-- Static Items -->
-        <div class="collection-item">
-          <img src="1butterflybracelet.jpeg" alt="Bracelet">
-          <h3>Snakeback with a Butterfly Bracelet</h3>
-          <p class="price">Price: 0 EGP</p>
-          <p class="pieces">Pieces: 1</p>
-        </div>
+    <section class="about">
+      <h3>About Us</h3>
+      <p>Au4U is a luxury accessories brand crafting elegant, hypoallergenic stainless steel jewelry made to last and glow with your personality.</p>
+    </section>
+  </main>
 
-        <div class="collection-item">
-          <img src="3FloorBracelet.jpeg" alt="Bracelet">
-          <h3>3 Floors Bracelet</h3>
-          <p class="price">Price: 0 EGP</p>
-          <p class="pieces">Pieces: 1</p>
-        </div>
-
-        <div class="collection-item">
-          <img src="5flowerbracelet.jpeg" alt="Bracelet">
-          <h3>5 Red Flowers Bracelet</h3>
-          <p class="price">Price: 0 EGP</p>
-          <p class="pieces">Pieces: 1</p>
-        </div>
-
-        <div class="collection-item">
-          <img src="bracelet140.jpeg" alt="Bracelet">
-          <h3>Cuff Bracelet</h3>
-          <p class="price">Price: 0 EGP</p>
-          <p class="pieces">Pieces: 1</p>
-        </div>
-
-        <!-- Slider Item -->
-        <div class="collection-item">
-          <div class="image-slider">
-            <img src="butterflyneclace.jpeg" class="slide active" alt="Image 1">
-            <img src="butterfly.jpeg" class="slide" alt="Image 2">
-            <button class="prev" onclick="changeSlide(this, -1)">❮</button>
-            <button class="next" onclick="changeSlide(this, 1)">❯</button>
-          </div>
-          <h3>Butterfly Necklace</h3>
-          <p class="price">Price: 0 EGP</p>
-          <p class="pieces">Pieces: 1</p>
-        </div>
-
-        <div class="collection-item">
-          <div class="image-slider">
-            <img src="crownnecklace.jpeg" class="slide active" alt="Image 1">
-            <img src="crown.jpeg" class="slide" alt="Image 2">
-            <button class="prev" onclick="changeSlide(this, -1)">❮</button>
-            <button class="next" onclick="changeSlide(this, 1)">❯</button>
-          </div>
-          <h3>Crown Necklace</h3>
-          <p class="price">Price: 150 EGP</p>
-          <p class="pieces">Pieces: 5</p>
-        </div>
-
-        <div class="collection-item">
-          <div class="image-slider">
-            <img src="Goldnail.jpeg" class="slide active" alt="Image 1">
-            <img src="RosegoldNail.jpeg" class="slide" alt="Image 2">
-            <img src="Gold,RosegoldNail.jpeg" class="slide" alt="Image 3">
-            <button class="prev" onclick="changeSlide(this, -1)">❮</button>
-            <button class="next" onclick="changeSlide(this, 1)">❯</button>
-          </div>
-          <h3>Gold OR Rosegold Nail Bracelet</h3>
-          <p class="price">Price: 0 EGP</p>
-          <p class="pieces">Pieces: 1</p>
-        </div>
-
-        <div class="collection-item">
-          <img src="green,purplebracelet.jpeg" alt="Bracelet">
-          <h3>Green OR Purple 3 Flowers Bracelet</h3>
-          <p class="price">Price: 0 EGP</p>
-          <p class="pieces">Pieces: 1</p>
-        </div>
-
-        <div class="collection-item">
-          <img src="RhombusBracelet.jpeg" alt="Bracelet">
-          <h3>Rhombus Bracelet</h3>
-          <p class="price">Price: 0 EGP</p>
-          <p class="pieces">Pieces: 1</p>
-        </div>
-
-        <div class="collection-item">
-          <div class="image-slider">
-            <img src="SilverCartier.jpeg" class="slide active" alt="Image 1">
-            <img src="rosegoldCartier.jpeg" class="slide" alt="Image 2">
-            <img src="rosegold,silvercartier.jpeg" class="slide" alt="Image 3">
-            <button class="prev" onclick="changeSlide(this, -1)">❮</button>
-            <button class="next" onclick="changeSlide(this, 1)">❯</button>
-          </div>
-          <h3>Silver OR Rosegold Cartier</h3>
-          <p class="price">Price: 0 EGP</p>
-          <p class="pieces">Pieces: 1</p>
-        </div>
-
-        <div class="collection-item">
-          <img src="snakebracelet.jpeg" alt="Bracelet">
-          <h3>SnakeBack Bracelet</h3>
-          <p class="price">Price: 0 EGP</p>
-          <p class="pieces">Pieces: 1</p>
-        </div>
-
-        <div class="collection-item">
-          <img src="snakebracelet3butterfly.jpeg" alt="Bracelet">
-          <h3>SnakeBack with 3 little butterflies Bracelet</h3>
-          <p class="price">Price: 0 EGP</p>
-          <p class="pieces">Pieces: 1</p>
-        </div>
-
-        <div class="collection-item">
-          <img src="snakenecklace.jpeg" alt="Bracelet">
-          <h3>SnakeBack Necklace</h3>
-          <p class="price">Price: 0 EGP</p>
-          <p class="pieces">Pieces: 1</p>
-        </div>
-
-        <div class="collection-item">
-          <img src="snakenecklacebracelet.jpeg" alt="Bracelet">
-          <h3>SnakeBack Bracelet and Necklace</h3>
-          <p class="price">Price: 0 EGP</p>
-          <p class="pieces">Pieces: 2</p>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <a href="shop.html" class="more-btn">More Collections</a>
-
-  <!-- ====== About ====== -->
-  <section class="about">
-    <div class="container">
-      <h2>About Au4U</h2>
-      <p><strong>Stainless Steel</strong></p>
-      <p>
-        At Au4U we believe accessories are more than fashion; they’re an expression of identity
-        and confidence. Each piece is curated to bring timeless style to everyday life.
-      </p>
-    </div>
-  </section>
-
-  <!-- ====== Footer ====== -->
   <footer>
-    <div class="container">
-      <p>For orders DM instagram or whatsapp</p>
-      <p>&copy; 2025 Au4U. All rights reserved.</p>
-    </div>
+    <p>&copy; 2025 Au4U. All rights reserved.</p>
   </footer>
-
 </body>
 </html>
