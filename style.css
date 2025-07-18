@@ -258,12 +258,24 @@ footer {
 }
 
 .drop-btn {
-  background: none;
+  background-color: #222; /* Dark but not full black */
   border: none;
-  color: white;
-  font-size: 1rem;
+  color: #fff;
+  font-size: 1.1rem;
+  font-weight: 500;
+  padding: 10px 20px;
+  border-radius: 8px;
   cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
 }
+
+.drop-btn:hover {
+  background-color: #444;
+  transform: scale(1.05);
+}
+
+
 
 .submenu li {
   padding: 0.5rem 1rem;
@@ -391,6 +403,23 @@ footer {
 }
 
 
+
+
+.price {
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+
+.old-price {
+  color: #414040;
+  text-decoration: line-through;
+  margin-right: 10px;
+}
+
+.new-price {
+  color: #000000; /* Red color to show it's on sale */
+  font-weight: bold;
+}
 
 
 
