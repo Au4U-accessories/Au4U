@@ -1,57 +1,115 @@
+// Inspiration messages with emojis
+const messages = [
+  "You are strong, beautiful, and unstoppable! 💪💖✨",
+  "Keep shining, gorgeous! Your sparkle lights up the world! ✨🌟💗",
+  "Girl power forever! You can achieve anything you set your mind to! 💥👑💖",
+  "Confidence looks amazing on you! Wear it every day! 💃💅💖",
+  "Believe in your magic and make your dreams come true! 🦄🌈💖",
+];
 
-document.addEventListener("DOMContentLoaded", function () {
-  const popup = document.getElementById("popup");
-  const popupImg = document.getElementById("popup-img");
-  const closeBtn = document.querySelector(".close-popup");
+// Show inspiring message under welcome when button clicked
+function showMessage() {
+  const msgElem = document.getElementById('inspiration-msg');
+  const randomMsg = messages[Math.floor(Math.random() * messages.length)];
+  msgElem.textContent = randomMsg;
+  msgElem.classList.add('show');
 
-  document.querySelectorAll(".view-btn").forEach(btn => {
-    btn.addEventListener("click", () => {
-      const imgSrc = btn.getAttribute("data-img");
-      popupImg.src = imgSrc;
-      popup.style.display = "flex";
-    });
-  });
-
-  closeBtn.addEventListener("click", () => {
-    popup.style.display = "none";
-  });
-
-  window.addEventListener("click", e => {
-    if (e.target === popup) popup.style.display = "none";
-  });
-});
-
-
-
-document.addEventListener('DOMContentLoaded', function () {
-  const dropBtn = document.querySelector('.drop-btn');
-  const submenu = document.querySelector('.submenu');
-  const submenuLinks = submenu.querySelectorAll('a');
-
-  // فتح / إغلاق القائمة عند الضغط على الزر
-  dropBtn.addEventListener('click', function (e) {
-    e.preventDefault();
-    submenu.classList.toggle('open');
-  });
-
-  // إغلاق القائمة بعد الضغط على أي رابط بداخلها
-  submenuLinks.forEach(link => {
-    link.addEventListener('click', () => {
-      submenu.classList.remove('open');
-    });
-  });
-});
+  // Hide message after 6 seconds
+  setTimeout(() => {
+    msgElem.classList.remove('show');
+  }, 10000);
+}
 
 
 
 
-  function changeSlide(button, direction) {
-    const slider = button.closest('.image-slider');
-    const slides = slider.querySelectorAll('.slide');
-    let activeIndex = Array.from(slides).findIndex(slide => slide.classList.contains('active'));
+function viewImage(button) {
+  const img = button.closest('.item').querySelector('.carousel-images img.active');
+  const modal = document.getElementById('imageModal');
+  const modalImg = document.getElementById('modalImage');
+  modalImg.src = img.src;
+  modal.style.display = 'flex';
+}
 
-    slides[activeIndex].classList.remove('active');
-    let newIndex = (activeIndex + direction + slides.length) % slides.length;
-    slides[newIndex].classList.add('active');
+function closeModal() {
+  document.getElementById('imageModal').style.display = 'none';
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//view image
+function getCurrentCarouselImage(button) {
+  const item = button.closest('.item.carousel');
+  const img = item.querySelector('.carousel-images img.active');
+  return img;
+}
+
+function viewImage(img) {
+  if (!img) return;
+  const modal = document.getElementById('image-modal');
+  const modalImg = document.getElementById('modal-img');
+
+  modalImg.src = img.src;
+  modal.style.display = 'flex';
+}
+
+function closeModal() {
+  const modal = document.getElementById('image-modal');
+  modal.style.display = 'none';
+}
+
+// Optional: close modal on clicking outside the image
+document.getElementById('image-modal').addEventListener('click', (e) => {
+  if (e.target.id === 'image-modal') {
+    closeModal();
   }
+});
+
+
+
+
+
+
+// Close lightbox on click outside image or pressing Escape key
+function closeLightbox(event) {
+  if (
+    event.target.id === 'lightbox' || 
+    event.key === 'Escape'
+  ) {
+    const lightbox = document.getElementById('lightbox');
+    lightbox.classList.remove('show');
+  }
+}
+
+document.getElementById('lightbox').addEventListener('click', closeLightbox);
+document.addEventListener('keydown', closeLightbox);
+
+
+
+
+
+
+
+
+
+
+
+
 
