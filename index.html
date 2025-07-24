@@ -2,46 +2,662 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Au4U - Home</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Au4U accessories 💖</title>
   <link rel="stylesheet" href="style.css" />
-  <script src="script.js"></script>
-  <script src="https://kit.fontawesome.com/your_kit_id.js" crossorigin="anonymous"></script>
 </head>
 <body>
+
   <header>
-    <nav class="navbar fixed-nav">
-      <div class="logo-social">
-        <span class="logo">Au4U</span>
-        <a href="shop.html" class="nav-link">Shop</a>
-        <span class="social-icons">
-          <a href="https://api.whatsapp.com/send/?phone=%2B201507135202&text&type=phone_number&app_absent=0" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp" class="icon-img" /></a>
-          <a href="https://www.instagram.com/au4u.accessories/" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram" class="icon-img" /></a>
-          <a href="https://www.tiktok.com/@au4u.accessories" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/3046/3046121.png" alt="TikTok" class="icon-img" /></a>
-          <a href="https://www.facebook.com/profile.php?id=61578102353925" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" alt="Facebook" class="icon-img" /></a>
-        </span>
+    <div class="header-content">
+      <span class="logo">💖 Au4U 💖</span>
+      <div class="social-icons">
+        <span class="follow-text">Follow Me:</span>
+        <a href="https://api.whatsapp.com/send/?phone=%2B201507135202&text&type=phone_number&app_absent=0" target="_blank" aria-label="WhatsApp">
+          <img src="https://img.icons8.com/color/48/whatsapp--v1.png" alt="WhatsApp" />
+        </a>
+        <a href="https://www.instagram.com/au4u.accessories/" target="_blank" aria-label="Instagram">
+          <img src="https://img.icons8.com/fluency/48/instagram-new.png" alt="Instagram" />
+        </a>
+        <a href="https://www.tiktok.com/@au4u.accessories" target="_blank" aria-label="TikTok">
+          <img src="https://img.icons8.com/fluency/48/tiktok.png" alt="TikTok" />
+        </a>
+        <a href="https://www.facebook.com/profile.php?id=61578102353925" target="_blank" aria-label="Facebook">
+          <img src="https://img.icons8.com/fluency/48/facebook-new.png" alt="Facebook" />
+        </a>
       </div>
-    </nav>
+    </div>
+    <p class="croll">scroll right for more collections</p>
   </header>
 
-  <main class="content">
-    <section class="hero">
-      <h1>Elegance Accessories That Glows With You</h1>
-      <h2>Stainless Steel Accessories</h2>
-      <h4>For Orders DM WhatsApp or Instagram</h4>
-      <h4>For Collections</h4>
-      <a href="shop.html" class="btn">Shop Now</a>
-    </section>
+  <nav>
+    <a href="#summer" class="nav-link">🌊 Summer</a>
+    <a href="#necklaces" class="nav-link">💎 Necklaces</a>
+    <a href="#bracelets" class="nav-link">💖 Bracelets</a>
+    <a href="#sales" class="nav-link">🔥 Sales</a>
+  </nav>
+
+  <section class="hero">
+    <h1>✨ Welcome to accessories world ✨</h1>
+    
+    <div class="inspire-box">
+      <button id="inspire-btn" onclick="showMessage()">💬 Keep clicking Me ✨</button>
+    </div>
+    
+    <p id="inspiration-msg" class="inspiration-msg" aria-live="polite" aria-atomic="true"></p>
+    
+    <p>Find your sparkle in every piece 💕</p>
+    <p class="order-text">For orders: DM on WhatsApp or Instagram 💬</p>
+  </section>
+<!--------------------------Summer----------------->
 
 
-    <section class="about">
-      <h3>About Us</h3>
-      <p>Au4U is a luxury accessories brand crafting elegant, hypoallergenic stainless steel jewelry made to last and glow with your personality.</p>
-    </section>
-  </main>
+
+
+  <section id="summer" class="collection" tabindex="-1">
+    <h2>Summer Collection</h2>
+    <div class="items">
+
+
+<div class="item carousel" data-index="0">
+  <div class="carousel-images">
+    <img src="summer1.jpg" class="active" alt="" />
+  </div>
+  <h3>Ship Wheel</h3>
+  <p class="price">
+    <span class="old-price">300 EGP</span>
+    <p></p>
+    <span class="new-price">250 EGP</span>
+  </p>
+  <button class="view-btn" onclick="viewImage(getCurrentCarouselImage(this))" aria-label="View Star Necklace">View 🔍</button>
+</div>
+
+
+
+
+
+<div class="item carousel" data-index="0">
+  <div class="carousel-images">
+    <img src="summer2.jpg" class="active" alt="" />
+  </div>
+  <h3>Dolphin tail</h3>
+  <p class="price">
+    <span class="old-price">300 EGP</span>
+    <p></p>
+    <span class="new-price">250 EGP</span>
+  </p>
+  <button class="view-btn" onclick="viewImage(getCurrentCarouselImage(this))" aria-label="View Star Necklace">View 🔍</button>
+</div>
+
+<div class="item carousel" data-index="0">
+  <div class="carousel-images">
+    <img src="summer3.jpg" class="active" alt="" />
+  </div>
+  <h3>Rock</h3>
+  <p class="price">
+    <span class="old-price">300 EGP</span>
+    <p></p>
+    <span class="new-price">250 EGP</span>
+  </p>
+  <button class="view-btn" onclick="viewImage(getCurrentCarouselImage(this))" aria-label="View Star Necklace">View 🔍</button>
+</div>
+
+
+<div class="item carousel" data-index="0">
+  <div class="carousel-images">
+    <img src="summer4.jpg" class="active" alt="" />
+  </div>
+  <h3>Oyster</h3>
+  <p class="price">
+    <span class="old-price">300 EGP</span>
+    <p></p>
+    <span class="new-price">250 EGP</span>
+  </p>
+  <button class="view-btn" onclick="viewImage(getCurrentCarouselImage(this))" aria-label="View Star Necklace">View 🔍</button>
+</div>
+
+
+<div class="item carousel" data-index="0">
+  <div class="carousel-images">
+    <img src="summer5.jpg" class="active" alt="" />
+  </div>
+  <h3>Colord Oyster</h3>
+  <p class="price">
+    <span class="old-price">300 EGP</span>
+    <p></p>
+    <span class="new-price">250 EGP</span>
+  </p>
+  <button class="view-btn" onclick="viewImage(getCurrentCarouselImage(this))" aria-label="View Star Necklace">View 🔍</button>
+</div>
+
+
+<div class="item carousel" data-index="0">
+  <div class="carousel-images">
+    <img src="summer6.jpg" class="active" alt="" />
+  </div>
+  <h3>Fish</h3>
+  <p class="price">
+    <span class="old-price">300 EGP</span>
+    <p></p>
+    <span class="new-price">250 EGP</span>
+  </p>
+  <button class="view-btn" onclick="viewImage(getCurrentCarouselImage(this))" aria-label="View Star Necklace">View 🔍</button>
+</div>
+
+<div class="item carousel" data-index="0">
+  <div class="carousel-images">
+    <img src="summer7.jpg" class="active" alt="" />
+  </div>
+  <h3>Star</h3>
+  <p class="price">
+    <span class="old-price">300 EGP</span>
+    <p></p>
+    <span class="new-price">250 EGP</span>
+  </p>
+  <button class="view-btn" onclick="viewImage(getCurrentCarouselImage(this))" aria-label="View Star Necklace">View 🔍</button>
+</div>
+
+
+<div class="item carousel" data-index="0">
+  <div class="carousel-images">
+    <img src="summer8.jpg" class="active" alt="" />
+  </div>
+  <h3>Sea Horse</h3>
+  <p class="price">
+    <span class="old-price">300 EGP</span>
+    <p></p>
+    <span class="new-price">250 EGP</span>
+  </p>
+  <button class="view-btn" onclick="viewImage(getCurrentCarouselImage(this))" aria-label="View Star Necklace">View 🔍</button>
+</div>
+
+<div class="item carousel" data-index="0">
+  <div class="carousel-images">
+    <img src="summer9.jpeg" class="active" alt="" />
+  </div>
+  <h3>Star</h3>
+  <p class="price">
+    <span class="old-price">300 EGP</span>
+    <p></p>
+    <span class="new-price">250 EGP</span>
+  </p>
+  <button class="view-btn" onclick="viewImage(getCurrentCarouselImage(this))" aria-label="View Star Necklace">View 🔍</button>
+</div>
+
+
+
+
+<div class="item carousel" data-index="0">
+  <div class="carousel-images">
+    <img src="summer10.jpeg" class="active" alt="" />
+  </div>
+  <h3>Oyster</h3>
+  <p class="price">
+    <span class="old-price">300 EGP</span>
+    <p></p>
+    <span class="new-price">250 EGP</span>
+  </p>
+  <button class="view-btn" onclick="viewImage(getCurrentCarouselImage(this))" aria-label="View Star Necklace">View 🔍</button>
+</div>
+
+
+
+<div class="item carousel" data-index="0">
+  <div class="carousel-images">
+    <img src="summer11.jpeg" class="active" alt="" />
+  </div>
+  <h3>Star</h3>
+  <p class="price">
+    <span class="old-price">300 EGP</span>
+    <p></p>
+    <span class="new-price">250 EGP</span>
+  </p>
+  <button class="view-btn" onclick="viewImage(getCurrentCarouselImage(this))" aria-label="View Star Necklace">View 🔍</button>
+</div>
+
+
+
+
+<div class="item carousel" data-index="0">
+  <div class="carousel-images">
+    <img src="summer12.jpeg" class="active" alt="" />
+  </div>
+  <h3>Star</h3>
+  <p class="price">
+    <span class="old-price">300 EGP</span>
+    <p></p>
+    <span class="new-price">250 EGP</span>
+  </p>
+  <button class="view-btn" onclick="viewImage(getCurrentCarouselImage(this))" aria-label="View Star Necklace">View 🔍</button>
+</div>
+
+
+<div class="item carousel" data-index="0">
+  <div class="carousel-images">
+    <img src="summer13.jpeg" class="active" alt="" />
+  </div>
+  <h3>Star</h3>
+  <p class="price">
+    <span class="old-price">300 EGP</span>
+    <p></p>
+    <span class="new-price">250 EGP</span>
+  </p>
+  <button class="view-btn" onclick="viewImage(getCurrentCarouselImage(this))" aria-label="View Star Necklace">View 🔍</button>
+</div>
+
+
+<div class="item carousel" data-index="0">
+  <div class="carousel-images">
+    <img src="summer14.jpeg" class="active" alt="" />
+  </div>
+  <h3>Sea Creatures</h3>
+  <p class="price">
+    <span class="old-price">300 EGP</span>
+    <p></p>
+    <span class="new-price">250 EGP</span>
+  </p>
+  <button class="view-btn" onclick="viewImage(getCurrentCarouselImage(this))" aria-label="View Star Necklace">View 🔍</button>
+</div>
+
+
+
+
+
+  </div>
+  </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <!-- Necklaces Section with Carousel -->
+  <section id="necklaces" class="collection" tabindex="-1">
+    <h2>💎 Necklaces</h2>
+    <div class="items">
+
+
+
+<div class="item carousel" data-index="0">
+  <div class="carousel-images">
+    <img src="necklace1.jpeg" class="active" alt="" />
+  </div>
+  <h3>Buterfly Necklace</h3>
+  <p class="price">
+    <span class="old-price">300 EGP</span>
+    <p></p>
+    <span class="new-price">250 EGP</span>
+  </p>
+  <button class="view-btn" onclick="viewImage(getCurrentCarouselImage(this))" aria-label="View Star Necklace">View 🔍</button>
+</div>
+
+<div class="item carousel" data-index="0">
+  <div class="carousel-images">
+    <img src="necklace1.1.jpeg" class="active" alt="" />
+  </div>
+  <h3>The Buterfly in necklace</h3>
+  <p class="price">
+    <span class="old-price">300 EGP</span>
+    <p></p>
+    <span class="new-price">250 EGP</span>
+  </p>
+  <button class="view-btn" onclick="viewImage(getCurrentCarouselImage(this))" aria-label="View Star Necklace">View 🔍</button>
+</div>
+
+
+
+<div class="item carousel" data-index="0">
+  <div class="carousel-images">
+    <img src="necklace2.jpeg" class="active" alt="" />
+  </div>
+  <h3>Crown Necklace</h3>
+  <p class="price">
+    <span class="old-price">300 EGP</span>
+    <p></p>
+    <span class="new-price">250 EGP</span>
+  </p>
+  <button class="view-btn" onclick="viewImage(getCurrentCarouselImage(this))" aria-label="View Star Necklace">View 🔍</button>
+</div>
+      
+
+
+
+
+<div class="item carousel" data-index="0">
+  <div class="carousel-images">
+    <img src="necklace2.1.jpeg" class="active" alt="" />
+  </div>
+  <h3>The Crown in neckalce</h3>
+  <p class="price">
+    <span class="old-price">300 EGP</span>
+    <p></p>
+    <span class="new-price">250 EGP</span>
+  </p>
+  <button class="view-btn" onclick="viewImage(getCurrentCarouselImage(this))" aria-label="View Star Necklace">View 🔍</button>
+</div>
+
+
+
+
+
+
+<div class="item carousel" data-index="0">
+  <div class="carousel-images">
+    <img src="necklace3.jpeg" class="active" alt="" />
+  </div>
+  <h3>Pow</h3>
+  <p class="price">
+    <span class="old-price">200 EGP</span>
+    <p></p>
+    <span class="new-price">150 EGP</span>
+  </p>
+  <button class="view-btn" onclick="viewImage(getCurrentCarouselImage(this))" aria-label="View Star Necklace">View 🔍</button>
+</div>
+
+
+
+
+
+<div class="item carousel" data-index="0">
+  <div class="carousel-images">
+    <img src="necklace4.jpeg" class="active" alt="" />
+  </div>
+  <h3>SnackBack</h3>
+  <p class="price">
+    <span class="old-price">200 EGP</span>
+    <p></p>
+    <span class="new-price">150 EGP</span>
+  </p>
+  <button class="view-btn" onclick="viewImage(getCurrentCarouselImage(this))" aria-label="View Star Necklace">View 🔍</button>
+</div>
+
+
+
+
+
+
+
+    </div>
+  </section>
+
+  <!-- Bracelets Section -->
+ 
+
+  <section id="bracelets" class="collection" tabindex="-1">
+    <h2>Bracelets</h2>
+    <div class="items">
+
+
+<div class="item carousel" data-index="0">
+  <div class="carousel-images">
+    <img src="bracelet1.jpeg" class="active" alt="" />
+  </div>
+  <h3>Cuff</h3>
+  <p class="price">
+    <span class="old-price">300 EGP</span>
+    <p></p>
+    <span class="new-price">250 EGP</span>
+  </p>
+  <button class="view-btn" onclick="viewImage(getCurrentCarouselImage(this))" aria-label="View Star Necklace">View 🔍</button>
+</div>
+
+
+<div class="item carousel" data-index="0">
+  <div class="carousel-images">
+    <img src="bracelet2.jpeg" class="active" alt="" />
+  </div>
+  <h3>3 Floors</h3>
+  <p class="price">
+    <span class="old-price">200 EGP</span>
+    <p></p>
+    <span class="new-price">170 EGP</span>
+  </p>
+  <button class="view-btn" onclick="viewImage(getCurrentCarouselImage(this))" aria-label="View Star Necklace">View 🔍</button>
+</div>
+
+
+<div class="item carousel" data-index="0">
+  <div class="carousel-images">
+    <img src="bracelet3.jpeg" class="active" alt="" />
+  </div>
+  <h3>Rhombus</h3>
+  <p class="price">
+    <span class="old-price">200 EGP</span>
+    <p></p>
+    <span class="new-price">170 EGP</span>
+  </p>
+  <button class="view-btn" onclick="viewImage(getCurrentCarouselImage(this))" aria-label="View Star Necklace">View 🔍</button>
+</div>
+
+<div class="item carousel" data-index="0">
+  <div class="carousel-images">
+    <img src="bracelet3.jpeg" class="active" alt="" />
+  </div>
+  <h3>Rhombus</h3>
+  <p class="price">
+    <span class="old-price">200 EGP</span>
+    <p></p>
+    <span class="new-price">170 EGP</span>
+  </p>
+  <button class="view-btn" onclick="viewImage(getCurrentCarouselImage(this))" aria-label="View Star Necklace">View 🔍</button>
+</div>
+
+
+<div class="item carousel" data-index="0">
+  <div class="carousel-images">
+    <img src="bracelet4.jpeg" class="active" alt="" />
+  </div>
+  <h3>SnackBack Butterfly</h3>
+  <p class="price">
+    <span class="old-price">200 EGP</span>
+    <p></p>
+    <span class="new-price">170 EGP</span>
+  </p>
+  <button class="view-btn" onclick="viewImage(getCurrentCarouselImage(this))" aria-label="View Star Necklace">View 🔍</button>
+</div>
+
+
+<div class="item carousel" data-index="0">
+  <div class="carousel-images">
+    <img src="bracelet5.jpeg" class="active" alt="" />
+  </div>
+  <h3>5 Flowers</h3>
+  <p class="price">
+    <span class="old-price">200 EGP</span>
+    <span class="new-price">150 EGP</span>
+  </p>
+  <button class="view-btn" onclick="viewImage(getCurrentCarouselImage(this))" aria-label="View Star Necklace">View 🔍</button>
+</div>
+
+
+<div class="item carousel" data-index="0">
+  <div class="carousel-images">
+    <img src="bracelet7.jpeg" class="active" alt="" />
+  </div>
+  <h3>3 Flowers</h3>
+  <p class="price">
+    <span class="old-price">200 EGP</span>
+    <p></p>
+    <span class="new-price">150 EGP</span>
+  </p>
+  <button class="view-btn" onclick="viewImage(getCurrentCarouselImage(this))" aria-label="View Star Necklace">View 🔍</button>
+</div>
+
+
+<div class="item carousel" data-index="0">
+  <div class="carousel-images">
+    <img src="bracelet8.jpeg" class="active" alt="" />
+  </div>
+  <h3>Gold Nail</h3>
+  <p class="price">
+    <span class="old-price">200 EGP</span>
+    <p></p>
+    <span class="new-price">150 EGP</span>
+  </p>
+  <button class="view-btn" onclick="viewImage(getCurrentCarouselImage(this))" aria-label="View Star Necklace">View 🔍</button>
+</div>
+
+
+<div class="item carousel" data-index="0">
+  <div class="carousel-images">
+    <img src="bracelet8.1.jpeg" class="active" alt="" />
+  </div>
+  <h3>RoseGold Nail</h3>
+  <p class="price">
+    <span class="old-price">200 EGP</span>
+    <p></p>
+    <span class="new-price">150 EGP</span>
+  </p>
+  <button class="view-btn" onclick="viewImage(getCurrentCarouselImage(this))" aria-label="View Star Necklace">View 🔍</button>
+</div>
+
+
+
+<div class="item carousel" data-index="0">
+  <div class="carousel-images">
+    <img src="bracelet9.jpeg" class="active" alt="" />
+  </div>
+  <h3>Silver Cartier</h3>
+  <p class="price">
+    <span class="old-price">200 EGP</span>
+    <p></p>
+    <span class="new-price">150 EGP</span>
+  </p>
+  <button class="view-btn" onclick="viewImage(getCurrentCarouselImage(this))" aria-label="View Star Necklace">View 🔍</button>
+</div>
+
+
+<div class="item carousel" data-index="0">
+  <div class="carousel-images">
+    <img src="bracelet9.1.jpeg" class="active" alt="" />
+  </div>
+  <h3>RoseGold Cartier</h3>
+  <p class="price">
+    <span class="old-price">200 EGP</span>
+    <p>.</p>
+    <span class="new-price">150 EGP</span>
+  </p>
+  <button class="view-btn" onclick="viewImage(getCurrentCarouselImage(this))" aria-label="View Star Necklace">View 🔍</button>
+</div>
+
+
+
+<div class="item carousel" data-index="0">
+  <div class="carousel-images">
+    <img src="bracelet10.jpeg" class="active" alt="" />
+  </div>
+  <h3>SnackBack</h3>
+  <p class="price">
+    <span class="old-price">150 EGP</span>
+    <span class="new-price">120 EGP</span>
+  </p>
+  <button class="view-btn" onclick="viewImage(getCurrentCarouselImage(this))" aria-label="View Star Necklace">View 🔍</button>
+</div>
+
+<div class="item carousel" data-index="0">
+  <div class="carousel-images">
+    <img src="bracelet11.jpeg" class="active" alt="" />
+  </div>
+  <h3>SnackBack with 3 Butterflies</h3>
+  <p class="price">
+    <span class="old-price">250 EGP</span>
+    <p></p>
+    <span class="new-price">180 EGP</span>
+  </p>
+  <button class="view-btn" onclick="viewImage(getCurrentCarouselImage(this))" aria-label="View Star Necklace">View 🔍</button>
+</div>
+
+  </div>
+  </section>
+
+
+  <!-- Sales Section with reduced sale prices -->
+  <section id="sales" class="collection" tabindex="-1">
+    <h2>🔥 On Sale! 🔥</h2>
+    <div class="items">
+
+<div class="item carousel" data-index="0">
+  <div class="carousel-images">
+    <img src="sale1.jpeg" class="active" alt="" />
+  </div>
+  <h3>Nail,SnackBackcartier</h3>
+  <p class="price">
+    <span class="old-price">400 EGP</span>
+    <p>Save 100 EGP</p>
+    <span class="new-price">300 EGP</span>
+  </p>
+  <button class="view-btn" onclick="viewImage(getCurrentCarouselImage(this))" aria-label="View Star Necklace">View 🔍</button>
+</div>
+
+
+
+<div class="item carousel" data-index="0">
+  <div class="carousel-images">
+    <img src="sale2.jpeg" class="active" alt="" />
+  </div>
+  <h3>SnackBack necklace and bracelet</h3>
+  <p class="price">
+    <span class="old-price">270 EGP</span>
+    <p>Save 70 EGP</p>
+    <span class="new-price">200 EGP</span>
+  </p>
+  <button class="view-btn" onclick="viewImage(getCurrentCarouselImage(this))" aria-label="View Star Necklace">View 🔍</button>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+  </section>
+
+
 
   <footer>
-    <p>&copy; 2025 Au4U. All rights reserved.</p>
+    💌 Follow @Au4U
   </footer>
+
+  <!-- Lightbox -->
+  <div id="lightbox" class="lightbox" role="dialog" aria-modal="true" aria-labelledby="lightbox-img" tabindex="-1" onclick="closeLightbox(event)">
+    <img id="lightbox-img" src="" alt="Enlarged view" />
+  </div>
+
+  <script src="script.js"></script>
+
+<div id="image-modal" class="modal" style="display:none;">
+  <span class="close" onclick="closeModal()">&times;</span>
+  <img class="modal-content" id="modal-img" alt="Enlarged image" />
+</div>
+
 </body>
 </html>
